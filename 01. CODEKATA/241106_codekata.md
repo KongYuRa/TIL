@@ -19,8 +19,7 @@ HelloWorld!
 str = input()
 ```
 
-기본 출력 문제이기 때문에 `print()`를 사용하여 주어진 str값을 출력한다.
-
+답
 ```
 str = input()
 
@@ -55,11 +54,7 @@ b = 5
 a, b = map(int, input().strip().split(' '))
 print(a + b)
 ```
-
-상기의 코드대로 작성하게 되면 a 값과 b 값을 합한 9라는 결과가 나온다.
-문자열은 작은 따옴표(' ')를 사용하여 입력 후 바로 뒤에 입력된 정수를 합하여 각자 출력한다.
-
-
+답
 ```
 a, b = map(int, input().strip().split(' '))
 
@@ -102,13 +97,13 @@ string 5
 출력 #1
 stringstringstringstringstring
 ```
+
 ```
 str, n = input().strip().split(' ')
 n = int(n)
 ```
 
-문자열이 원하는 수 만큼 반복해서 출력되어야 하므로, 문자열 str을 정수 n만큼 곱하여 출력하면 된다.
-
+답
 ```
 str, n = input().strip().split(' ')
 n = int(n)

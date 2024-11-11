@@ -24,7 +24,7 @@ HelloWorld!
 str1, str2 = input().strip().split(' ')
 ```
 
-두 문자의 입력값을 추가해야하기 때문에 `print()`에 두 문자를 더하는 값 `str1+str2`를 입력한다.
+답
 
 ```
 str1, str2 = input().strip().split(' ')
@@ -96,8 +96,7 @@ e
 str = input()
 ```
 
-문자를 각 리스트로 입력받아서 출력하면 된다.
-
+답
 ```
 str = input()
 
@@ -144,7 +143,8 @@ print('\n'.join(input()))
 a = int(input())
 ```
 
-정수를 받았을 때 2로 나눈 나머지를 통해 홀수, 짝수를 판별할 수 있다.
+답
+
 ```
 a = int(input())
 
