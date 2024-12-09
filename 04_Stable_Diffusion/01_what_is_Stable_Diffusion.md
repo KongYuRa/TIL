@@ -6,7 +6,7 @@ Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 
 [논문](https://arxiv.org/abs/2112.10752)    /   [github](https://github.com/CompVis/stable-diffusion)
 
----
+
 
 # 구조
 
