@@ -12,7 +12,7 @@ Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 [논문](https://arxiv.org/abs/2112.10752)    /   [github](https://github.com/CompVis/stable-diffusion)
 
 
-### 구조
+# 구조
 
 ![alt text](image/image01.png)
 
@@ -185,4 +185,5 @@ Skip Connection의 데이터를 디코더에 전달할 때 실행
 
 - Skip Connection으로 전달된 원본 이미지의 세부 정보와, 디코더가 생성한 중간 이미지를 병합
 - 원본 정보와 생성된 정보를 모두 활용하여 최종 이미지를 복원
+
 
