@@ -1,8 +1,8 @@
 ## 1. Stable Diffusion 이란?
 
-Stable Diffusion은 text-to-image 딥러닝 모델이다.
+Stable Diffusion은 text-to-image 딥러닝 모델
 
-Latent Diffusion 모델의 일종이며, 잠재 확산 모델을 이용한 고해상도 이미지 합성 연구를 기반으로 만들어졌다.
+Latent Diffusion 모델의 일종이며, 잠재 확산 모델을 이용한 고해상도 이미지 합성 연구 기반
 
 [github](https://github.com/CompVis/stable-diffusion)  
 
@@ -21,11 +21,11 @@ Latent Diffusion 모델의 일종이며, 잠재 확산 모델을 이용한 고�
 
 `x̃` : 노이즈가 섞인 이미지
 
-- 원본 이미지에 **노이즈 (잡음)** 를 섞어서 흐릿하거나 보기 힘든 상태로 만듦
+- 원본 이미지에 **노이즈 (잡음)** 를 섞어서 흐릿하거나 보기 힘든 상태로 변화된 이미지
 
 `E`: 인코더 (Encoder)
 
-- 이미지를 "압축된 정보"(Latent Space) 로 바꿈
+- 이미지를 "압축된 정보"(Latent Space) 로 변경 (노이즈 삽입)
 
 `D`: 디코더 (Decoder)
 
@@ -73,16 +73,16 @@ U-Net이 노이즈를 제거하며 이미지를 점진적으로 복원하는데,
 2. DPM++ 2M Karras
 - Denoising Diffusion Probabilistic Models의 발전된 버전
 - 2M은 2차(momentum)-기반 방식을 의미하며, 복잡한 노이즈 제거 과정을 효율적으로 처리
-- arras 스케줄링 방식을 적용하여 이미지의 디테일과 품질이 뛰어남
+- arras 스케줄링 방식을 적용하여 이미지의 디테일과 높은 품질
 
 3. DDPM (Denoising Diffusion Probabilistic Models)
 - Diffusion 모델의 기본 알고리즘
-- 단계별로 매우 정교한 계산을 하며, 안정적이지만 처리 속도가 느림
-- 결과물이 부드럽고 자연스럽게 나타나는 경향이 있음
+- 단계별로 매우 정교한 계산을 하며, 안정적이지만 낮은 처리 속도
+- 결과물이 부드럽고 자연스럽게 생성
 
 4. UniPC (Unified Predictor-Corrector)
-- Predictor(예측)와 Corrector(보정) 단계를 결합하여, 매우 빠르고 안정적인 이미지 생성이 가능
-- 다양한 이미지 스타일에서 높은 성능을 보임
+- Predictor(예측)와 Corrector(보정) 단계를 결합하여, 매우 빠르고 안정적인 이미지 생성 가능
+- 다양한 이미지 스타일에서 높은 성능
 
 5. DDIM (Denoising Diffusion Implicit Models)
 - DDPM의 변형으로, 노이즈 제거 과정에서 중간 계산 단계를 줄여 속도를 높인 방식
