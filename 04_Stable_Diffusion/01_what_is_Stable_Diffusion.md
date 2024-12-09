@@ -15,7 +15,7 @@ Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 
 ---
 
-#### 1. Pixel Space (픽셀 공간)
+## 1. Pixel Space (픽셀 공간)
 
 `x`: 원본 이미지
 
@@ -34,19 +34,19 @@ Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 - 압축된 정보를 다시 사람이 볼 수 있는 이미지로 복원 (노이즈 제거)
 
 
----
 
-#### 2. Latent Space (잠재 공간)
+## 2. Latent Space (잠재 공간)
 
-1. Diffusion Process (확산 과정)
+#### 1. Diffusion Process (확산 과정)
 
 ![alt text](image/image02.png)
 
 - 원본 이미지에 랜덤 노이즈를 더해 복잡한 이미지로 변형
 - 모델이 노이즈를 다시 되돌려서 깨끗한 이미지를 복원하도록 학습
 
+---
 
-2. Denoising U-Net (잡음 제거 모델)
+#### 2. Denoising U-Net (잡음 제거 모델)
 
 ![alt text](image/image03.png)
 
@@ -55,6 +55,7 @@ Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 - 노이즈가 많은 이미지 `zT` 를 입력 받음 (상위 예시 내에서는 `xT`)
 - 작은 단위로 나누어 이미지를 처리하고, 각 단계를 거쳐(`zT → zT-1 → ... → z0`) 점진적으로 개선
 - 점차 깨끗한 이미지로 만듦
+
 ---
 
 #### 3. Scheduler (스케줄러)
