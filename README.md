@@ -6,4 +6,4 @@
 
 03 PYTHON : 파이썬 공부 정리
 
-04_Stable_Diffusion : 
+04_Stable_Diffusion : Stable Diffusion 모델 공부
