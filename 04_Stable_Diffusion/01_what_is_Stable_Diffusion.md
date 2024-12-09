@@ -1,6 +1,6 @@
 # Stable Diffusion 이란?
 
-Stable Diffusion은 Latent Diffusion 모델의 일종, text-to-image 딥러닝 모델
+Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 
 1. 노이즈 제거를 기반으로 이미지 생성:
 처음에는 랜덤 노이즈에서 시작하지만, 점진적으로 노이즈를 제거하면서 원하는 이미지를 생성
