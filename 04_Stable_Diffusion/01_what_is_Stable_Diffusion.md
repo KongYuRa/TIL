@@ -2,15 +2,11 @@
 
 Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 
-1. 노이즈 제거를 기반으로 이미지 생성:
-처음에는 랜덤 노이즈에서 시작하지만, 점진적으로 노이즈를 제거하면서 원하는 이미지를 생성
-
-2. 조건 정보 활용 (Conditioning):
-텍스트, 참조 이미지, 또는 의미 지도와 같은 조건을 입력받아 원하는 스타일이나 내용을 반영한 이미지를 생성
 
 
 [논문](https://arxiv.org/abs/2112.10752)    /   [github](https://github.com/CompVis/stable-diffusion)
 
+---
 
 # 구조
 
@@ -74,29 +70,29 @@ U-Net이 노이즈를 제거하며 이미지를 점진적으로 복원하는데,
 스케줄러의 종류
 ![alt text](image/image04.png)
 
-1. Euler
+1. **Euler**
 - 이미지의 디테일이 적당히 유지되며, 부드러운 스타일을 제공
 - 매우 효율적이고, 반복 횟수(Steps)가 적더라도 결과물이 안정적
 
-2. DPM++ 2M Karras
+2. **DPM++ 2M Karras**
 - Denoising Diffusion Probabilistic Models의 발전된 버전
 - 2M은 2차(momentum)-기반 방식을 의미하며, 복잡한 노이즈 제거 과정을 효율적으로 처리
 - arras 스케줄링 방식을 적용하여 이미지의 디테일과 높은 품질
 
-3. DDPM (Denoising Diffusion Probabilistic Models)
+3. **DDPM (Denoising Diffusion Probabilistic Models)**
 - Diffusion 모델의 기본 알고리즘
 - 단계별로 매우 정교한 계산을 하며, 안정적이지만 낮은 처리 속도
 - 결과물이 부드럽고 자연스럽게 생성
 
-4. UniPC (Unified Predictor-Corrector)
+4. **UniPC (Unified Predictor-Corrector)**
 - Predictor(예측)와 Corrector(보정) 단계를 결합하여, 매우 빠르고 안정적인 이미지 생성 가능
 - 다양한 이미지 스타일에서 높은 성능
 
-5. DDIM (Denoising Diffusion Implicit Models)
+5. **DDIM (Denoising Diffusion Implicit Models)**
 - DDPM의 변형으로, 노이즈 제거 과정에서 중간 계산 단계를 줄여 속도를 높인 방식
 - 빠르게 결과를 얻을 수 있지만, 디테일이 DDPM이나 DPM++보다는 조금 부족
 
-6. Huen
+6. **Huen**
 - Heun's Method를 사용하는 샘플러로, 오일러 방식(Euler)의 개선된 형태
 - 노이즈 제거 계산에서 좀 더 정확한 예측 제공
 - 결과물이 부드럽고 디테일도 적당히 유지
@@ -158,7 +154,7 @@ U-Net이 노이즈를 제거하며 이미지를 점진적으로 복원하는데,
 
 조건을 참고하여 복구 할 때 작업을 더 정밀하게 수행
 
-- Q, K, V (Query, Key, Value) 라는 메커니즘 사용
+- **Q, K, V (Query, Key, Value)** 라는 메커니즘 사용
 
 1)  Query (Q): 현재 이미지 상태의 정보
 - 현재 이미지에서 중요한 정보(특정 부분)를 찾기 위한 신호
