@@ -33,7 +33,7 @@ Latent Diffusion 모델의 일종이며, 잠재 확산 모델을 이용한 고�
 
 ---
 
-### 2. Latent Space (잠재 공간)
+#### 2. Latent Space (잠재 공간)
 
 1. Diffusion Process (확산 과정)
 
@@ -54,7 +54,7 @@ U-Net : 노이즈 제거의 중심 모델
 - 점차 깨끗한 이미지로 만듦
 ---
 
-2. Scheduler (스케줄러)
+#### 3. Scheduler (스케줄러)
 그림에서 노이즈를 추가하고 제거하는 반복 과정을 관리하는 영역
 
 - 노이즈를 추가하는 과정 (Forward Process):`z → zT`로 진행되는 과정(왼쪽에서 오른쪽 화살표)
@@ -63,21 +63,35 @@ U-Net : 노이즈 제거의 중심 모델
 - 노이즈를 제거하는 과정 (Reverse Process): `zT → zT-1 → z0`로 진행되는 과정(오른쪽에서 왼쪽 화살표)
 U-Net이 노이즈를 제거하며 이미지를 점진적으로 복원하는데, 이때 스케줄러가 어느 정도로 노이즈를 제거할지 결정
 
-- 스케줄러의 종류
+스케줄러의 종류
+![alt text](image/image03.png)
 
-1. DDPM (Denoising Diffusion Probabilistic Models):기본적인 스케줄러로, 확률적인 방식을 사용해 노이즈를 추가/제거
-각 단계가 엄격하게 정의되어 있으며 계산이 상대적으로 느림
+1. Euler
+- 이미지의 디테일이 적당히 유지되며, 부드러운 스타일을 제공
+- 매우 효율적이고, 반복 횟수(Steps)가 적더라도 결과물이 안정적
 
-2. DDIM (Denoising Diffusion Implicit Models):
-좀 더 효율적으로 노이즈를 제거하는 방법
-반복 횟수를 줄일 수 있어 계산 속도가 빠름
+2. DPM++ 2M Karras
+- Denoising Diffusion Probabilistic Models의 발전된 버전
+- 2M은 2차(momentum)-기반 방식을 의미하며, 복잡한 노이즈 제거 과정을 효율적으로 처리
+- arras 스케줄링 방식을 적용하여 이미지의 디테일과 품질이 뛰어남
 
-3. Euler/Euler a:
-확률 편미분 방정식(SDE)을 이용하여 더 정교하게 노이즈를 처리. 특히 고화질 이미지 생성에 자주 사용
+3. DDPM (Denoising Diffusion Probabilistic Models)
+- Diffusion 모델의 기본 알고리즘
+- 단계별로 매우 정교한 계산을 하며, 안정적이지만 처리 속도가 느림
+- 결과물이 부드럽고 자연스럽게 나타나는 경향이 있음
 
-4. DPM++:
-최신 스케줄러, 효율성과 품질을 모두 고려한 방식
-Stable Diffusion에서 고화질 이미지를 빠르게 생성할 때 자주 사용
+4. UniPC (Unified Predictor-Corrector)
+- Predictor(예측)와 Corrector(보정) 단계를 결합하여, 매우 빠르고 안정적인 이미지 생성이 가능
+- 다양한 이미지 스타일에서 높은 성능을 보임
+
+5. DDIM (Denoising Diffusion Implicit Models)
+- DDPM의 변형으로, 노이즈 제거 과정에서 중간 계산 단계를 줄여 속도를 높인 방식
+- 빠르게 결과를 얻을 수 있지만, 디테일이 DDPM이나 DPM++보다는 조금 부족
+
+6. Huen
+- Heun's Method를 사용하는 샘플러로, 오일러 방식(Euler)의 개선된 형태
+- 노이즈 제거 계산에서 좀 더 정확한 예측 제공
+- 결과물이 부드럽고 디테일도 적당히 유지
 
 
 ## 3. Cross-Attention (교차 주의 메커니즘)
