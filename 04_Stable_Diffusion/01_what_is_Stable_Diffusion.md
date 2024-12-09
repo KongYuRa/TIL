@@ -37,15 +37,15 @@ Latent Diffusion 모델의 일종이며, 잠재 확산 모델을 이용한 고�
 
 1. Diffusion Process (확산 과정)
 
+![alt text](image/image02.png)
+
 - 원본 이미지에 랜덤 노이즈를 더해 복잡한 이미지로 변형
 - 모델이 노이즈를 다시 되돌려서 깨끗한 이미지를 복원하도록 학습
 
 
-Denoising U-Net (잡음 제거 U-Net)
+2. Denoising U-Net (잡음 제거 모델)
 
-U-Net : 노이즈 제거의 중심 모델
-
-![alt text](image/image02.png)
+![alt text](image/image03.png)
 
 
 
@@ -64,7 +64,7 @@ U-Net : 노이즈 제거의 중심 모델
 U-Net이 노이즈를 제거하며 이미지를 점진적으로 복원하는데, 이때 스케줄러가 어느 정도로 노이즈를 제거할지 결정
 
 스케줄러의 종류
-![alt text](image/image03.png)
+![alt text](image/image04.png)
 
 1. Euler
 - 이미지의 디테일이 적당히 유지되며, 부드러운 스타일을 제공
