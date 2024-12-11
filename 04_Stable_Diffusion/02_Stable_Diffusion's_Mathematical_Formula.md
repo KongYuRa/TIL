@@ -6,7 +6,6 @@
 ![alt text](image/image05.png)
 
 
----
 
 ## 2. Cumulative Forward Process
 Forward Process의 전체 과정을 하나의 식으로 축약
