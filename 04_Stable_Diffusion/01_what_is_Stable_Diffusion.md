@@ -2,6 +2,8 @@
 
 Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 
+원본 이미지에 노이즈를 점진적으로 더한 후 제거하여 원본 이미지와 같이 복원
+
 
 
 [논문](https://arxiv.org/abs/2112.10752)    /   [github](https://github.com/CompVis/stable-diffusion)
