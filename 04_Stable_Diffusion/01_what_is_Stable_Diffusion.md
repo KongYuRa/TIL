@@ -21,11 +21,11 @@ Latent Diffusion 모델의 일종으로, text-to-image 딥러닝 모델
 
 `x`: 원본 이미지
 
-- 모델이 처리하려는 시작점 의 이미지 (고화질)
+- 모델이 처리하려는 시작점의 이미지 (고화질)
 
-`x̃` : 노이즈가 섞인 이미지
+`x̃` : 복원된 이미지
 
-- 원본 이미지에 노이즈 (잡음) 를 섞어서 흐릿하거나 보기 힘든 상태로 변화된 이미지
+- 노이즈를 다시 복원하여 생성된 이미지
 
 `E`: 인코더 (Encoder)
 
@@ -80,7 +80,7 @@ U-Net이 노이즈를 제거하며 이미지를 점진적으로 복원하는데,
 2. **DPM++ 2M Karras**
 - Denoising Diffusion Probabilistic Models의 발전된 버전
 - 2M은 2차(momentum)-기반 방식을 의미하며, 복잡한 노이즈 제거 과정을 효율적으로 처리
-- arras 스케줄링 방식을 적용하여 이미지의 디테일과 높은 품질
+- Karras 스케줄링 방식을 적용하여 이미지의 디테일과 높은 품질
 
 3. **DDPM (Denoising Diffusion Probabilistic Models)**
 - Diffusion 모델의 기본 알고리즘
