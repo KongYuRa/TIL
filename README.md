@@ -6,4 +6,6 @@
 
 03 PYTHON : 파이썬 공부 정리
 
-04_Stable_Diffusion : Stable Diffusion 모델 공부
+04 Stable_Diffusion : Stable Diffusion 모델 공부
+
+05 SQL : SQL 공부 정리
