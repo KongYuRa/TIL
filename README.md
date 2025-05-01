@@ -1,6 +1,6 @@
 # TIL
 
-01 CODEKATA : https://school.programmers.co.kr/learn/challenges/training?order=acceptance_desc
+01 TIL : Today I Learn (02 ~ 05 내에 정리 한 공부를 토대로 회고)
 
 02 TEAM_STUDY : 스파르타 부트캠프 학습 스터디
 
