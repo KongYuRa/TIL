@@ -2,7 +2,7 @@
 
 00 TIL : Today I Learn
 
-01 AUDIO : 음향 공부 정리
+01 CODEKATA : 프로그래머스 코드카타
 
 02 TEAM_STUDY : 스파르타 부트캠프 학습 스터디
 
