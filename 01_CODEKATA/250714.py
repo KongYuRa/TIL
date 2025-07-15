@@ -148,56 +148,6 @@ def solution(my_string, overwrite_string, s):
 
 
 #
-# a 와 b 출력하기
-
-# 문제 설명
-# 정수 a와 b가 주어집니다. 각 수를 입력받아 입출력 예와 같은 형식으로 출력하는 코드를 작성해 보세요.
-
-# 제한사항
-# -100,000 ≤ a, b ≤ 100,000
-
-# 입출력 예
-# 입력 #1
-# 4 5
-# 출력 #1
-# a = 4
-# b = 5
-
-
-# 코드
-
-a, b = map(int, input().strip().split(' '))
-print("a =",a) 
-print("b =",b)
-
-
-
-#
-# 문자열 반복해서 출력하기
-
-# 문제 설명
-# 문자열 str과 정수 n이 주어집니다.
-# str이 n번 반복된 문자열을 만들어 출력하는 코드를 작성해 보세요.
-
-# 제한사항
-# 1 ≤ str의 길이 ≤ 10
-# 1 ≤ n ≤ 5
-
-# 입출력 예
-# 입력 #1
-# string 5
-# 출력 #1
-# stringstringstringstringstring
-
-
-# 코드
-
-a, b = input().strip().split(' ')
-print(a * int(b))
-
-
-
-#
 # 문자열 반복해서 출력하기
 
 # 문제 설명
